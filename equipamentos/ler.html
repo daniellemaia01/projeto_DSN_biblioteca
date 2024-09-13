@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Equipamentos</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-dark text-white text-center p-3">
+        <h1>Biblioteca - Visualizar Equipamentos</h1>
+    </header>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <main class="container mt-4">
+        <h2>Equipamentos</h2>
+        <div id="lista-equipamentos" class="list-group">
+            <!-- Equipamentos serão exibidos aqui -->
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#navbar").load("navbar.html");
+            fetchEquipamentos();
+        });
+    </script>
+</body>
+</html>
