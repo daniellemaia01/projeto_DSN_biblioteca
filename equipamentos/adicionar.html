@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Equipamentos</title>
+    <link href="../style.css" rel="stylesheet" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-dark text-white text-center p-3">
+        <h1>Biblioteca - Adicionar Equipamentos</h1>
+    </header>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <main class="container mt-4">
+        <h2>Adicionar Equipamento</h2>
+        <form id="form-adicionar">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="marca">Marca:</label>
+                <input type="text" class="form-control" id="marca" name="marca" required>
+            </div>
+            <div class="form-group">
+                <label for="preco">Preço para Empréstimo:</label>
+                <input type="number" class="form-control" id="preco" name="preco" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="quantidade">Quantidade Disponível:</label>
+                <input type="number" class="form-control" id="quantidade" name="quantidade" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Adicionar</button>
+        </form>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#navbar").load("navbar.html");
+        });
+    </script>
+</body>
+</html>
