@@ -8,6 +8,7 @@
 <body>
     <h1>Reserva de Salas de Reunião</h1>
 
+    <!-- Formulário de reserva -->
     <form id="reservationForm">
         <label for="roomNumber">Número da Sala:</label>
         <input type="text" id="roomNumber" required><br><br>
@@ -21,10 +22,11 @@
         <button type="submit">Reservar</button>
     </form>
 
+    <!-- Listagem de reservas -->
     <div id="reservationList"></div>
 
-    <script src="script.js"></script>
+    <!-- Incluindo o arquivo JavaScript -->
     <script src="https://unpkg.com/parse/dist/parse.min.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
