@@ -100,3 +100,66 @@ function preEditarDvd(){
 
     }
 }
+
+function salvarDvd(){
+
+    let idDvd= getURLParamValue('id');
+
+     // Se está editando. Nesse if ele averigua se tem idDvd. Se tiver edita
+     if(idDvd){ 
+        let instanciaAxios= axios.create({
+            baseURL: BASE_URL_DVDS,
+            headers: {
+                'X-Parse-Application-Id': 'zQ8GBmAbVEIGSPmbMMKKYZHPiN3stv2Ou9ZyGoqN',
+                'X-Parse-REST-API-Key': '08h3KTkweA8TpKcRAyn5x9kPbM3hPBKjbwM6IXIA'
+            }
+        });
+        instanciaAxios.put(`/${idDvd}`, 
+            {
+                titulo: document.getElementById('titulo').value,
+                ano: parseInt(document.getElementById('ano').value),
+                genero: document.getElementById('genero').value
+            }
+            
+        ).then(
+            function (response) {
+                alert('Sucesso ao editar dvd.');
+                return;
+            }
+        )
+        .catch(function (error) {
+            // No caso de erro, apresentar na tela
+            alert('Erro ao editar dvd: ' + error.message);
+            return;
+        });
+
+    } else{
+        //criando dvd
+        let instanciaAxios= axios.create({
+            baseURL: BASE_URL_DVDS,
+            headers: {
+                'X-Parse-Application-Id': 'zQ8GBmAbVEIGSPmbMMKKYZHPiN3stv2Ou9ZyGoqN',
+                'X-Parse-REST-API-Key': '08h3KTkweA8TpKcRAyn5x9kPbM3hPBKjbwM6IXIA'
+            }
+        });
+        instanciaAxios.post(``, 
+            {
+                titulo: document.getElementById('titulo').value,
+                ano: parseInt(document.getElementById('ano').value),
+                genero: document.getElementById('genero').value
+            }
+            
+        ).then(
+            function (response) {
+                alert('Sucesso ao criar dvd.');
+                return;
+            }
+        )
+        .catch(function (error) {
+            // No caso de erro, apresentar na tela
+            alert('Erro ao criar dvd: ' + error.message);
+            return;
+        });
+    }
+    
+}
