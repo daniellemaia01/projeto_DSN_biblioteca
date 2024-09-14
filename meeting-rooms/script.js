@@ -2,6 +2,8 @@ const APPLICATION_ID = 'zQ8GBmAbVEIGSPmbMMKKYZHPiN3stv2Ou9ZyGoqN';
 const REST_API_KEY = '08h3KTkweA8TpKcRAyn5x9kPbM3hPBKjbwM6IXIA';
 const BASE_URL = 'https://parseapi.back4app.com/classes/Reservations';
 
+Parse.initialize(APP_ID, JAVASCRIPT_KEY);
+
 async function createReservation(roomNumber, reservationTime, reservedBy) {
     const Reservation = Parse.Object.extend('Reservations');
     const newReservation = new Reservation();
