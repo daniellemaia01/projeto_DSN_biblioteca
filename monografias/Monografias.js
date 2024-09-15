@@ -36,7 +36,7 @@ function listarMonografias() {
                 <td>${monografia.autor}</td>
                 <td>${monografia.ano}</td>
                 <td>${monografia.resumo}</td>
-                <td><a href="edita_monografia.html?id=${monografia.objectId}" class="btn btn-primary">Editar</a>
+                <td><a href="CriarEditarMonografias.html?id=${monografia.objectId}" class="btn btn-primary">Editar</a>
                     <a href="javascript:void(0)" onclick="javascript:removerMonografia('${monografia.objectId}')" class="btn btn-primary">Apagar</a>
                 </td>`;
             });
