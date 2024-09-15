@@ -152,6 +152,7 @@ function salvarDvd(){
         ).then(
             function (response) {
                 alert('Sucesso ao criar dvd.');
+                window.location.href = 'lista_dvds.html'
                 return;
             }
         )
