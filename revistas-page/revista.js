@@ -1,6 +1,6 @@
 
     
-    Parse.initialize("zQ8GBmAbVEIGSPmbMMKKYZHPiN3stv2Ou9ZyGoqN", "Bpkjzp40fafbzqZ8xGq9vM0TbwBJC5WawcMApOvp"); // Substitua pelas suas credenciais
+    Parse.initialize("zQ8GBmAbVEIGSPmbMMKKYZHPiN3stv2Ou9ZyGoqN", "Bpkjzp40fafbzqZ8xGq9vM0TbwBJC5WawcMApOvp");
     Parse.serverURL = 'https://parseapi.back4app.com/';
     // Função para criar uma nova revista
     async function criarRevista() {
